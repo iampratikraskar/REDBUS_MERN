@@ -1,0 +1,78 @@
+/* ===== WRAPPER ===== */
+.wrapper {
+  background: linear-gradient(135deg, #fff5f5, #ffecec);
+  padding: 60px 20px;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* ===== TEXT ===== */
+.textSection {
+  max-width: 500px;
+}
+
+.textSection h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.textSection ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.textSection li {
+  font-size: 15px;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+/* ===== STORE BUTTONS ===== */
+.storeButtons {
+  display: flex;
+  gap: 15px;
+}
+
+.storeButtons img {
+  height: 45px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.storeButtons img:hover {
+  transform: scale(1.05);
+}
+
+/* ===== IMAGE ===== */
+.imageSection img {
+  width: 320px;
+  max-width: 100%;
+  transition: 0.3s;
+}
+
+.imageSection img:hover {
+  transform: scale(1.05);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .storeButtons {
+    justify-content: center;
+  }
+}

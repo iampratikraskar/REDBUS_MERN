@@ -1,0 +1,82 @@
+/* ===== BUTTON ===== */
+.proceedButton {
+  background: linear-gradient(135deg, #d84e55, #ff6b6b);
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.proceedButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(216, 78, 85, 0.3);
+}
+
+/* ===== DRAWER CONTAINER ===== */
+.drawerContainer {
+  width: 420px;
+  max-width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #f9fafb;
+}
+
+/* ===== HEADER ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 20px;
+  background: #ffffff;
+  border-bottom: 1px solid #eee;
+}
+
+.header h2 {
+  font-size: 18px;
+  color: #333;
+}
+
+.header span {
+  cursor: pointer;
+  font-size: 20px;
+  color: #666;
+  transition: 0.3s;
+}
+
+.header span:hover {
+  color: #d84e55;
+  transform: scale(1.2);
+}
+
+/* ===== FORM AREA ===== */
+.formWrapper {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+/* SCROLLBAR (modern touch) */
+.formWrapper::-webkit-scrollbar {
+  width: 6px;
+}
+
+.formWrapper::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 10px;
+}
+
+.formWrapper::-webkit-scrollbar-thumb:hover {
+  background: #bbb;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .drawerContainer {
+    width: 100%;
+  }
+}

@@ -1,0 +1,130 @@
+/* ===== WRAPPER ===== */
+.wrapper {
+  padding: 50px 20px;
+  background: #ffffff;
+}
+
+/* ===== TOP SECTION ===== */
+.topSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* IMAGE */
+.imageBox img {
+  width: 100%;
+  max-width: 450px;
+}
+
+/* TEXT */
+.textBox {
+  max-width: 500px;
+}
+
+.textBox h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.textBox p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* BUTTON */
+.customBtn {
+  border: 2px solid #d84e55 !important;
+  color: #d84e55 !important;
+  font-weight: 600 !important;
+  border-radius: 8px !important;
+  padding: 6px 18px !important;
+  transition: all 0.3s ease !important;
+}
+
+.customBtn:hover {
+  background: #d84e55 !important;
+  color: #fff !important;
+  transform: translateY(-2px);
+}
+
+/* ===== DIVIDER ===== */
+.divider {
+  height: 1px;
+  background: #eee;
+  margin: 40px auto;
+  max-width: 1100px;
+}
+
+/* ===== STATS GRID ===== */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* ===== STAT CARD ===== */
+.statCard {
+  background: #f9fafb;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+/* TYPE */
+.type {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 5px;
+}
+
+/* NUMBER */
+.statCard h1 {
+  font-size: 28px;
+  color: #d84e55;
+  margin-bottom: 10px;
+}
+
+/* DETAILS */
+.details {
+  font-size: 13px;
+  color: #555;
+}
+
+/* HOVER */
+.statCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .topSection {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .imageBox img {
+    max-width: 300px;
+  }
+
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+}

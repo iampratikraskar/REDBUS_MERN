@@ -1,0 +1,104 @@
+.tripTypecontainer {
+  max-width: 520px;
+  margin: 40px auto;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Heading */
+.hireVehicleHeading {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Wrapper */
+.wrapper {
+  background: #f5f7fb;
+  padding: 20px;
+  border-radius: 16px;
+}
+
+/* Message */
+.message {
+  background: #ffeaa7;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* Card */
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  margin-bottom: 12px;
+  border-radius: 14px;
+  background: #ffffff;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border: 1px solid transparent;
+  position: relative;
+}
+
+/* Hover */
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Active */
+.active {
+  border: 1px solid #6c5ce7;
+  background: linear-gradient(135deg, #f3f0ff, #ffffff);
+}
+
+/* Disabled */
+.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Left section */
+.left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Icon */
+.icon {
+  font-size: 22px;
+  color: #6c5ce7;
+}
+
+/* Title */
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2d3436;
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 13px;
+  color: #636e72;
+}
+
+/* Badge */
+.badge {
+  font-size: 11px;
+  background: #dfe6e9;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .tripTypecontainer {
+    margin: 20px;
+  }
+}

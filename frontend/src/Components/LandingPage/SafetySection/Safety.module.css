@@ -1,0 +1,114 @@
+/* ===== WRAPPER ===== */
+.wrapper {
+  background: #ffffff;
+  padding: 60px 20px;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+/* ===== IMAGE ===== */
+.imageBox img {
+  width: 280px;
+  max-width: 100%;
+}
+
+/* ===== CONTENT ===== */
+.content {
+  flex: 1;
+}
+
+.content h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #222;
+}
+
+.content h3 {
+  font-size: 16px;
+  color: #555;
+  margin: 10px 0 15px;
+}
+
+/* BUTTON */
+.linkBtn {
+  background: none;
+  border: none;
+  color: #d84e55;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 15px;
+  transition: 0.3s;
+}
+
+.linkBtn:hover {
+  text-decoration: underline;
+}
+
+/* INFO TEXT */
+.info {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 25px;
+}
+
+.info span {
+  font-weight: 700;
+  color: #d84e55;
+}
+
+/* ===== GRID ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* ===== CARD ===== */
+.card {
+  background: #f9fafb;
+  padding: 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.card h4 {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.card p {
+  font-size: 13px;
+  color: #666;
+}
+
+/* HOVER */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

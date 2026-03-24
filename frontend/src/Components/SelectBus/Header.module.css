@@ -1,0 +1,62 @@
+/* ===== HEADER ===== */
+.header {
+  background: #ffffff;
+  padding: 20px 40px;
+  border-bottom: 1px solid #eee;
+}
+
+/* ===== BREADCRUMB ===== */
+.breadcrumb {
+  font-size: 13px;
+  color: #777;
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+/* ===== MAIN INFO ===== */
+.mainInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* TITLE */
+.mainInfo h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* DATE */
+.mainInfo p {
+  margin: 4px 0 0;
+  color: #888;
+  font-size: 14px;
+}
+
+/* FARE */
+.fare {
+  font-size: 14px;
+  color: #666;
+}
+
+.fare span {
+  color: #d84e55;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .header {
+    padding: 15px 20px;
+  }
+
+  .mainInfo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}

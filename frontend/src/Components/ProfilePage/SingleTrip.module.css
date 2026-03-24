@@ -1,0 +1,94 @@
+/* ===== CARD ===== */
+.card {
+  display: flex;
+  gap: 20px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* IMAGE */
+.imageBox img {
+  width: 220px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* CONTENT */
+.content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* SECTIONS */
+.section {
+  width: 48%;
+}
+
+.section h3 {
+  color: #d84e55;
+  margin-bottom: 10px;
+}
+
+/* DOT */
+.dot {
+  font-size: 7px;
+  color: green;
+  margin-right: 10px;
+}
+
+/* TEXT */
+.section p {
+  font-size: 14px;
+  margin: 5px 0;
+  color: #444;
+}
+
+/* PRICE */
+.price {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #d84e55;
+}
+
+/* PASSENGER */
+.passengerList {
+  margin-top: 10px;
+}
+
+.passengerCard {
+  background: #f8f9fa;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+  }
+
+  .content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .section {
+    width: 100%;
+  }
+
+  .imageBox img {
+    width: 100%;
+  }
+}

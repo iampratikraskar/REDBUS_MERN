@@ -1,0 +1,150 @@
+/* ===== MAIN NAVBAR ===== */
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 40px;
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* ===== LEFT SIDE ===== */
+.leftSide_header {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.leftSide_header img {
+  height: 40px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.leftSide_header img:hover {
+  transform: scale(1.05);
+}
+
+/* ===== NAV LINKS ===== */
+.Navbar__listOne {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.Navbar__listOne li {
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.Navbar__listOne li:hover {
+  color: #d84e55;
+}
+
+/* underline animation */
+.Navbar__listOne li::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #d84e55;
+  transition: width 0.3s ease;
+}
+
+.Navbar__listOne li:hover::after {
+  width: 100%;
+}
+
+/* ===== RIGHT SIDE ===== */
+.rightSide_header {
+  display: flex;
+  align-items: center;
+}
+
+.Navbar__listTwo {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  list-style: none;
+}
+
+/* ===== MENU ITEMS ===== */
+.Navbar__listTwo li {
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #444;
+  transition: color 0.3s ease;
+}
+
+.Navbar__listTwo li:hover {
+  color: #d84e55;
+}
+
+/* ===== ICONS ===== */
+.icons {
+  font-size: 26px;
+  cursor: pointer;
+  color: #555;
+  transition: all 0.3s ease;
+}
+
+.icons:hover {
+  color: #d84e55;
+  transform: scale(1.15);
+}
+
+/* ===== BADGE ===== */
+sup {
+  background: #d84e55;
+  color: white;
+  font-size: 10px;
+  padding: 2px 5px;
+  border-radius: 6px;
+  margin-left: 4px;
+}
+
+/* ===== LINKS ===== */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .Navbar {
+    padding: 10px 20px;
+  }
+
+  .Navbar__listOne {
+    gap: 15px;
+  }
+
+  .Navbar__listTwo {
+    gap: 15px;
+  }
+
+  .leftSide_header {
+    gap: 20px;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 600px) {
+  .Navbar__listOne {
+    display: none;
+  }
+
+  .Navbar {
+    padding: 10px 15px;
+  }
+}

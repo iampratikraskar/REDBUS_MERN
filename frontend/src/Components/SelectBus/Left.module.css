@@ -1,0 +1,58 @@
+/* SIDEBAR */
+.sidebar {
+  width: 260px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+/* TITLE */
+.sidebar h3 {
+  margin-bottom: 15px;
+}
+
+/* SECTION */
+.section {
+  margin-bottom: 20px;
+}
+
+/* HEADING */
+.heading {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* ITEMS */
+.item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  cursor: pointer;
+  color: #444;
+}
+
+.item:hover {
+  color: #d84e55;
+}
+
+/* CHECKBOX */
+label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 6px 0;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* AMENITIES */
+.amenity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 6px 0;
+  font-size: 14px;
+}

@@ -1,0 +1,215 @@
+/* 🌍 Main Layout */
+.container {
+  display: flex;
+  gap: 24px;
+  padding: 20px;
+  max-width: 1300px;
+  margin: 0 auto;
+  background-color: #f5f6fa;
+  box-sizing: border-box;
+}
+
+/* 🚌 LEFT SECTION */
+.left {
+  flex: 1;
+}
+
+/* 🔤 Title */
+.title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* 🧾 Card Grid */
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* 🧱 Card */
+.card {
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* 🖼 Image */
+.imageBox {
+  width: 100%;
+  height: 140px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.imageBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 📄 Info */
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* 🚐 Vehicle Name */
+.vehicle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+}
+
+/* 💰 Price */
+.price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.price span {
+  font-size: 13px;
+  color: #777;
+}
+
+.price strong {
+  font-size: 18px;
+  color: #d84e55;
+  font-weight: 700;
+}
+
+/* 🔘 Footer */
+.footer {
+  margin-top: 12px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* 🔗 Link Reset */
+.link {
+  text-decoration: none;
+}
+
+/* 📌 RIGHT PANEL */
+.right {
+  width: 300px;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* 🛡 Safety Card */
+.safetyCard {
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.safetyHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.safetyHeader img {
+  width: 40px;
+  height: 40px;
+}
+
+.safetyHeader h4 {
+  margin: 0;
+  color: #ff6f00;
+}
+
+.safetyHeader p {
+  margin: 0;
+  font-size: 13px;
+  color: #555;
+}
+
+.safetyCard ul {
+  padding-left: 18px;
+  margin: 10px 0 0;
+}
+
+.safetyCard li {
+  font-size: 13px;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+/* 📘 Guidelines */
+.guidelines {
+  background: #e5ebf8;
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.guidelines h3 {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.guidelines p {
+  font-size: 13px;
+  color: #555;
+}
+
+/* 📱 Tablet */
+@media (max-width: 1024px) {
+  .container {
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .right {
+    width: 240px;
+  }
+}
+
+/* 📱 Mobile */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 12px;
+  }
+
+  .right {
+    width: 100%;
+  }
+
+  .cardGrid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+/* 📱 Small Mobile */
+@media (max-width: 480px) {
+  .cardGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+}

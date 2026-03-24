@@ -1,0 +1,32 @@
+/* ===== MAIN ===== */
+.container {
+  padding: 30px;
+  background: #f9fafb;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ===== CENTER ===== */
+.center {
+  text-align: center;
+  padding: 50px;
+  font-size: 18px;
+  color: #555;
+}
+
+/* ===== EMPTY ===== */
+.empty {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.empty h2 {
+  color: #d84e55;
+  margin-bottom: 10px;
+}
+
+.empty p {
+  color: #666;
+}

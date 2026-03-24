@@ -1,0 +1,39 @@
+/* HAMBURGER ICON */
+.menuIcon {
+  display: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* ===== MOBILE VIEW ===== */
+@media (max-width: 768px) {
+  .menuIcon {
+    display: block;
+  }
+
+  .navLinks {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+
+    display: none;
+  }
+
+  .navLinks.active {
+    display: flex;
+  }
+
+  .leftSection {
+    gap: 10px;
+  }
+
+  .rightSection span {
+    display: none;
+  }
+}

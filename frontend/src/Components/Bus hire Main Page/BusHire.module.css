@@ -1,0 +1,66 @@
+.container {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Banner */
+.banner {
+  position: relative;
+}
+
+.banner img {
+  width: 100%;
+}
+
+.bannerContent {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  color: white;
+}
+
+.bannerContent h1 {
+  font-size: 40px;
+}
+
+/* Section */
+.section {
+  padding: 40px 10%;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Steps */
+.steps {
+  display: flex;
+  justify-content: space-around;
+}
+
+.stepCard {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* Features */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.featureCard {
+  background: #f5f7fb;
+  padding: 15px 20px;
+  border-radius: 10px;
+}
+
+/* Form Section */
+.formSection {
+  margin-top: 40px;
+}

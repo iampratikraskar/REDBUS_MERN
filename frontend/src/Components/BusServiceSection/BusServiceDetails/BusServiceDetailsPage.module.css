@@ -1,0 +1,137 @@
+/* 🌍 Layout */
+.container {
+  display: flex;
+  gap: 24px;
+  padding: 20px;
+  max-width: 1300px;
+  margin: auto;
+  background: #f5f6fa;
+}
+
+/* LEFT */
+.left {
+  flex: 2;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+/* IMAGE */
+.image {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 16px;
+}
+
+/* HEADINGS */
+.heading {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+/* TEXT */
+.text {
+  font-size: 14px;
+  color: #555;
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* LIST */
+.list {
+  padding-left: 18px;
+}
+
+.list li {
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+/* RIGHT */
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* INFO BOX */
+.infoBox {
+  background: #fff;
+  padding: 16px;
+  border-radius: 12px;
+}
+
+/* PRICE BOX */
+.priceBox {
+  background: #f8f4f4;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.priceBox span {
+  font-weight: 600;
+  color: #d84e55;
+}
+
+/* BUTTON */
+.bookBtn {
+  display: block;
+  margin-top: 12px;
+  background: #d84e55;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.bookBtn:hover {
+  background: #c7434a;
+}
+
+/* FARE BOX */
+.fareBox {
+  background: #fff;
+  padding: 16px;
+  border-radius: 12px;
+}
+
+/* ROW */
+.row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin: 6px 0;
+}
+
+/* TOTAL */
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-weight: bold;
+  color: green;
+}
+
+/* LOADING */
+.loading {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 18px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}

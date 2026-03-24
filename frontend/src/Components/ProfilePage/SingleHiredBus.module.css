@@ -1,0 +1,65 @@
+/* ===== CARD ===== */
+.card {
+  display: flex;
+  gap: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* ===== IMAGE ===== */
+.imageBox img {
+  width: 220px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* ===== DETAILS ===== */
+.details {
+  flex: 1;
+}
+
+.details h3 {
+  color: #d84e55;
+  margin-bottom: 10px;
+}
+
+/* DOT */
+.dot {
+  font-size: 7px;
+  color: green;
+  margin-right: 10px;
+}
+
+/* TEXT */
+.details p {
+  font-size: 14px;
+  margin: 6px 0;
+  color: #444;
+}
+
+/* PRICE */
+.price {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #d84e55;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+  }
+
+  .imageBox img {
+    width: 100%;
+  }
+}

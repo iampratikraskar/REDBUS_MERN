@@ -1,0 +1,38 @@
+.mainBar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #ffffff;
+  padding: 12px 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Tabs */
+.tab {
+  cursor: pointer;
+  font-size: 14px;
+  color: #636e72;
+  transition: 0.2s ease;
+}
+
+/* Hover */
+.tab:hover {
+  color: #6c5ce7;
+}
+
+/* Active */
+.active {
+  color: #6c5ce7;
+  font-weight: 600;
+  border-bottom: 2px solid #6c5ce7;
+}
+
+/* Content */
+.displayArea {
+  margin-top: 15px;
+  padding: 15px;
+  background: #f5f7fb;
+  border-radius: 10px;
+}

@@ -1,0 +1,74 @@
+.container {
+  padding: 15px;
+  background: #fff;
+  border-radius: 12px;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #636e72;
+  border-bottom: 2px solid transparent;
+}
+
+.active {
+  color: #6c5ce7;
+  border-bottom: 2px solid #6c5ce7;
+}
+
+/* Points */
+.pointsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Card */
+.pointCard {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 10px;
+  background: #f5f7fb;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.pointCard:hover {
+  background: #eef1ff;
+}
+
+/* Info */
+.pointInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Button */
+.continueButton {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #6c5ce7;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.continueButton:hover {
+  background: #5a4cd1;
+}

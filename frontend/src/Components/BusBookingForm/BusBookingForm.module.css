@@ -1,0 +1,141 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  background: #f5f7fb;
+  color: #2c2c2c;
+}
+
+/* Title */
+.passenger_mainTitle {
+  text-align: center;
+  font-size: 22px;
+  margin: 20px 0;
+  font-weight: 600;
+  color: #2d3436;
+}
+
+/* Section Title */
+.passangerInfoTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 10px;
+  font-weight: 600;
+  color: #1c1c1c;
+  font-size: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Card Container */
+.ContentBlock {
+  margin: 20px;
+  padding: 25px 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+}
+
+.ContentBlock:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Labels */
+.form_label {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #636e72;
+  font-weight: 500;
+}
+
+/* Inputs */
+.form_input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #dfe6e9;
+  font-size: 14px;
+  margin-top: 6px;
+  transition: 0.2s ease;
+  background: #fafafa;
+}
+
+.form_input:focus {
+  border-color: #6c5ce7;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.1);
+}
+
+/* Radio */
+.radioButton {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #6c5ce7;
+}
+
+.form_radio_label {
+  margin-right: 15px;
+  font-size: 14px;
+}
+
+/* Highlight Message */
+.passengerContactMsg {
+  margin-bottom: 15px;
+  color: #2d3436;
+  background: #fff3cd;
+  border-radius: 6px;
+  font-size: 12px;
+  padding: 6px 15px;
+  display: inline-block;
+}
+
+/* Insurance Box */
+.insure_title {
+  margin: 15px 0;
+  padding: 12px;
+  background: #ffeaa7;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 13px;
+  color: #2d3436;
+}
+
+/* Button */
+.proceed_to_button {
+  width: 100%;
+  background: linear-gradient(135deg, #ff6b6b, #d63031);
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.proceed_to_button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 15px rgba(214, 48, 49, 0.3);
+}
+
+/* Checkbox styling */
+input[type="checkbox"] {
+  accent-color: #6c5ce7;
+  cursor: pointer;
+}
+
+/* Scrollbar (modern touch 😎) */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #dfe6e9;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b2bec3;
+}
