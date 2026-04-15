@@ -1,9 +1,9 @@
 import * as actionTypes from "./actionTypes";
 import axios from "axios";
-const loginSuccess = (response) => {
+const loginSuccess = (user) => {
   return {
     type: actionTypes.LOGIN_SUCCESS,
-    payload: response.profileObj,
+    payload: user,
   };
 };
 

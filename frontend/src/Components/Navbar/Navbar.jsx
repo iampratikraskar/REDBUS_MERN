@@ -1,199 +1,106 @@
 import React, { useState } from "react";
 import styles from "./Navbar.module.css";
-
-import Menu from "@material-ui/core/Menu";
-import MenuItem from "@material-ui/core/MenuItem";
-
-import { RiArrowDropDownLine } from "react-icons/ri";
-import { MdAccountCircle } from "react-icons/md";
-
-import { Link, useHistory } from "react-router-dom";
-import axios from "axios";
-
-import { useSelector, useDispatch } from "react-redux";
-import {
-  loginSuccess,
-  loginFailure,
-  logout,
-} from "../../Redux/auth/actions";
-
+import AuthModal from "../AuthModel/AuthModal";
 import ComingSoonModal from "../../Elements/ComingSoonModal";
 
+import { Link, useHistory } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { loginSuccess, logout } from "../../Redux/auth/actions";
+
+import { MdAccountCircle } from "react-icons/md";
+import { RiArrowDownSLine } from "react-icons/ri";
+
 const Navbar = () => {
-  const [anchorEl, setAnchorEl] = useState(null);
-  const [anchorEl2, setAnchorEl2] = useState(null);
+  const [isAuthOpen, setIsAuthOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [openMenu, setOpenMenu] = useState(null);
 
   const dispatch = useDispatch();
   const history = useHistory();
 
-  const isLoggedIn = useSelector((state) => state.authReducer.isLoggedIn);
-  const currentCustomer = useSelector(
-    (state) => state.authReducer.currentCustomer
+  const user = useSelector(
+    (state) => state?.authReducer?.currentCustomer
   );
 
-  // ---------------- LOGIN FUNCTION ----------------
-  const handleDummyLogin = async () => {
-    try {
-      const res = await axios.post("http://localhost:5000/api/login", {
-        email: "test@gmail.com",
-        password: "123456",
-      });
-
-      // Save in localStorage
-      localStorage.setItem("token", res.data.token);
-      localStorage.setItem("user", JSON.stringify(res.data.user));
-
-      // Redux update
-      dispatch(loginSuccess(res.data.user));
-
-      alert("Login Successful ✅");
-    } catch (err) {
-      dispatch(loginFailure(err));  // ✅ pass error
-      alert("Cannot login. Please try again. ");
-    }
-  };
-
-  // ---------------- LOGOUT ----------------
   const handleLogout = () => {
-    localStorage.removeItem("token");
-    localStorage.removeItem("user");
-
+    localStorage.clear();
     dispatch(logout());
     history.push("/");
   };
 
-  // ---------------- MENU HANDLERS ----------------
-  const handleMenuOpen = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleMenuOpen2 = (event) => {
-    setAnchorEl2(event.currentTarget);
-  };
-
-  const handleMenuClose = () => {
-    setAnchorEl(null);
-    setIsModalOpen(true);
-  };
-
-  const handleMenuClose2 = () => {
-    setAnchorEl2(null);
-  };
-
-  // ---------------- CHECK LOGIN ----------------
-  let user = null;
-
-  try {
-    user = JSON.parse(localStorage.getItem("user"));
-  } catch (e) {
-    user = null;
-  }
-
   return (
-    <div className={styles.Navbar}>
+    <nav className={styles.navbar}>
+      {/* MODALS */}
+      {/* <AuthModal
+        isOpen={isAuthOpen}
+        setIsOpen={setIsAuthOpen}
+        onLoginSuccess={(user) => dispatch(loginSuccess(user))}
+      /> */}
+
       <ComingSoonModal
         isOpen={isModalOpen}
         setIsOpen={setIsModalOpen}
       />
 
-      {/* LEFT SIDE */}
-      <div className={styles.leftSide_header}>
-        <img
-          src="https://www.redbus.in/i/59538b35953097248522a65b4b79650e.png"
-          alt="logo"
-          onClick={() => history.push("/")}
-        />
+      {/* LEFT */}
+      <div className={styles.left}>
+        <h2 onClick={() => history.push("/")}>RedBus</h2>
 
-        <ul className={styles.Navbar__listOne}>
-          <li>
-            <Link to="/">BUS TICKETS</Link>
-          </li>
-
-          <li>
-            <Link to="/bus-hire">BUS HIRE</Link>
-          </li>
-        </ul>
+        <div className={styles.links}>
+          <Link to="/">Bus Tickets</Link>
+          <Link to="/bus-hire">Bus Hire</Link>
+        </div>
       </div>
 
-      {/* RIGHT SIDE */}
-      <div className={styles.rightSide_header}>
-        <ul className={styles.Navbar__listTwo}>
-          <li onClick={() => setIsModalOpen(true)}>
-            MANAGE BOOKING
-          </li>
+      {/* RIGHT */}
+      <div className={styles.right}>
+        {/* MANAGE BOOKING */}
+        <div
+          className={styles.dropdown}
+          onMouseEnter={() => setOpenMenu("booking")}
+          onMouseLeave={() => setOpenMenu(null)}
+        >
+          <span>
+            Manage Booking <RiArrowDownSLine />
+          </span>
 
-          {/* DROPDOWN 1 */}
-          <li>
-            <RiArrowDropDownLine
-              className={styles.icons}
-              onClick={handleMenuOpen}
-            />
+          {openMenu === "booking" && (
+            <div className={styles.menu}>
+              <p onClick={() => setIsModalOpen(true)}>Bus Ticket</p>
+              <p onClick={() => setIsModalOpen(true)}>Cancel</p>
+              <p onClick={() => setIsModalOpen(true)}>Reschedule</p>
+            </div>
+          )}
+        </div>
 
-            <Menu
-              anchorEl={anchorEl}
-              open={Boolean(anchorEl)}
-              onClose={() => setAnchorEl(null)}
-            >
-              <MenuItem onClick={handleMenuClose}>Bus Ticket</MenuItem>
-              <MenuItem onClick={handleMenuClose}>Cancel</MenuItem>
-              <MenuItem onClick={handleMenuClose}>Reschedule</MenuItem>
-              <MenuItem onClick={handleMenuClose}>Show My Ticket</MenuItem>
-              <MenuItem onClick={handleMenuClose}>Email / SMS</MenuItem>
-            </Menu>
-          </li>
+        {/* USER */}
+        <div
+          className={styles.dropdown}
+          onMouseEnter={() => setOpenMenu("user")}
+          onMouseLeave={() => setOpenMenu(null)}
+        >
+          <MdAccountCircle size={28} />
 
-          {/* ACCOUNT ICON */}
-          <li>
-            <MdAccountCircle
-              className={styles.icons}
-              style={{ fontSize: "30px" }}
-            />
-          </li>
-
-          {/* DROPDOWN 2 */}
-          <li>
-            <RiArrowDropDownLine
-              className={styles.icons}
-              onClick={handleMenuOpen2}
-            />
-
-            <Menu
-              anchorEl={anchorEl2}
-              open={Boolean(anchorEl2)}
-              onClose={handleMenuClose2}
-            >
+          {openMenu === "user" && (
+            <div className={styles.menu}>
               {user ? (
                 <>
-                  <MenuItem>Welcome, {user.name || "User"}</MenuItem>
-
-                  <MenuItem>
-                    <Link
-                      to="/my-profile"
-                      style={{
-                        textDecoration: "none",
-                        color: "black",
-                        fontWeight: "bold",
-                      }}
-                    >
-                      My Profile
-                    </Link>
-                  </MenuItem>
-
-                  <MenuItem onClick={handleLogout}>
-                    Sign Out
-                  </MenuItem>
+                  <p>👋 {user.name}</p>
+                  <p onClick={() => history.push("/my-profile")}>
+                    My Profile
+                  </p>
+                  <p onClick={handleLogout}>Logout</p>
                 </>
               ) : (
-                <MenuItem onClick={handleDummyLogin}>
-                  Dummy Login
-                </MenuItem>
+                <p onClick={() => history.push("/login")}>
+                  Login / Register
+                </p>
               )}
-            </Menu>
-          </li>
-        </ul>
+            </div>
+          )}
+        </div>
       </div>
-    </div>
+    </nav>
   );
 };
 
